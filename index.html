@@ -1,145 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carlos A. Estala Velasco – Resume</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #ffffff;
-      --text-color: #1e293b;
-      --accent-color: #058ED9;
-      --highlight-color: #66CCFF;
-      --sidebar-bg: #004E7C;
+      --bg-color: #f9fafb;
+      --text-color: #1f2937;
+      --accent-color: #3b82f6;
     }
-
+    [data-theme="dark"] {
+      --bg-color: #0f172a;
+      --text-color: #f1f5f9;
+      --accent-color: #60a5fa;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
       display: flex;
     }
-
     aside {
-      width: 260px;
-      background-color: var(--sidebar-bg);
+      width: 250px;
+      background-color: var(--accent-color);
       color: white;
       padding: 2rem 1rem;
       min-height: 100vh;
       position: sticky;
       top: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
-
     aside img {
       width: 120px;
       border-radius: 50%;
-      margin-bottom: 1rem;
+      display: block;
+      margin: 0 auto 1rem;
     }
-
     aside h1 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       text-align: center;
       margin-bottom: 0.5rem;
     }
-
     aside p, aside a {
-      font-size: 0.9rem;
-      color: white;
       text-align: center;
+      display: block;
+      margin: 0.3rem auto;
+      color: white;
       text-decoration: none;
-      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
     }
-
     aside nav {
       margin-top: 2rem;
-      width: 100%;
     }
-
     aside nav a {
       display: block;
-      padding: 0.5rem;
+      margin: 0.5rem 0;
+      font-weight: bold;
       color: white;
       text-decoration: none;
-      text-align: center;
-      transition: background-color 0.2s;
     }
-
-    aside nav a:hover {
-      background-color: var(--highlight-color);
-      color: black;
-    }
-
     main {
       flex-grow: 1;
       padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+      max-width: 1000px;
     }
-
     h2 {
-      color: var(--accent-color);
       border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.2rem;
+      padding-bottom: 0.3rem;
     }
-
+    details {
+      margin-bottom: 1rem;
+    }
     details summary {
-      font-weight: 600;
       cursor: pointer;
-      background-color: var(--accent-color);
-      color: white;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
     }
-
-    details[open] summary {
-      background-color: var(--highlight-color);
-      color: black;
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 2px solid var(--accent-color);
+      padding: 0.5rem;
+      cursor: pointer;
+      color: var(--accent-color);
+      border-radius: 5px;
+      z-index: 1000;
     }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
     footer {
       text-align: center;
-      margin-top: 4rem;
       padding: 2rem;
-      font-size: 0.9rem;
-      color: #64748b;
     }
-
     @media (max-width: 768px) {
       body {
         flex-direction: column;
       }
       aside {
         width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 1rem;
-      }
-      aside nav a {
-        display: inline-block;
-        margin: 0 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        min-height: auto;
       }
     }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
   <aside>
-    <img src="headshot.jpg" alt="Carlos A. Estala Velasco">
+    <img src="https://media.licdn.com/dms/image/v2/D5616AQG7nBqC08aFHg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1685120828953?e=1749081600&v=beta&t=JpbdKpjSUb4OR422oZtycM0hIH9bjUVv1XFJzXRYChE" alt="Carlos A. Estala Velasco" />
     <h1>Carlos A. Estala Velasco</h1>
     <p>Global Co-Lead, SAP AppHaus</p>
     <a href="mailto:estalav@gmail.com">estalav@gmail.com</a>
@@ -157,15 +132,137 @@
   <main>
     <section id="summary">
       <h2>Executive Summary</h2>
-      <p>Strategic and results-driven executive with a proven track record in driving innovation, enterprise architecture, and global partnerships. As the Global Co-Lead for SAP AppHaus Network Partners and SAP Enterprise Architect, I lead the development and execution of SAP’s innovation strategy, enabling business transformation through AI, Generative AI, and SAP Business Technology Platform (BTP). [...]</p>
+      <p>Strategic and results-driven executive... [full summary from resume goes here]</p>
     </section>
 
-    <!-- The full updated and styled EXPERIENCE section will be here -->
-    <!-- Keeping the content of the previous expanded experience section as is -->
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <details>
+        <summary>SAP Labs LLC – Global Co-Lead, SAP AppHaus Network & Enterprise Architect (Nov 2024 – Present)</summary>
+        <ul>
+          <li>Define and drive the global SAP AppHaus Network strategy...</li>
+          <li>Established innovation spaces in North America and LATAM...</li>
+          <li>Aligned global partners with SAP’s AI and cloud solutions...</li>
+          <li>Led business AI workshops with Generative AI and LLMs...</li>
+          <li>Provided architectural expertise (Solution Concept, Diagrams...)</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>SAP Labs LLC – Regional Lead for NA and LAC (Feb 2023 – Oct 2024)</summary>
+        <ul>
+          <li>Extended the AppHaus Partner network in LAC Region...</li>
+          <li>Led engagements with NBA, Cirque du Soleil, Petrobras, etc...</li>
+          <li>Led AI workshops to support AI readiness and adoption...</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>SAP Labs LLC – SAP IT Principal Consultant, GCS (Aug 2018 – Jan 2023)</summary>
+        <ul>
+          <li>Led SAP BTP and Hyperscaler adoption for enterprise customers...</li>
+          <li>Built internal Monitoring & Observability service...</li>
+          <li>Deployed Kubernetes clusters on GCP Galaxy with AIOps...</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>SAP Labs LLC – SAP IT Technology Senior Consultant, GCS (Mar 2013 – Jul 2018)</summary>
+        <ul>
+          <li>Implemented and delivered internal systems for Palo Alto teams...</li>
+          <li>Led SAP ECC, ERP, BW migrations with global coordination...</li>
+          <li>Designed and implemented automated incident processes...</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>SAP Mexico – Technical Quality Manager, MaxAttention (Mar 2010 – Feb 2013)</summary>
+        <ul>
+          <li>Directed IT transformation projects for Coca-Cola Femsa and others...</li>
+          <li>Led installation and safeguarding of SAP HANA systems...</li>
+          <li>Led BW-HANA Migration and managed quality gates...</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>SAP Mexico – SAP Contractor, Global DBA (Mar 2007 – Feb 2010)</summary>
+        <ul>
+          <li>Provided 2nd-level SAP Hosting support for Germany/US...</li>
+          <li>Led system migrations and SAP installations...</li>
+          <li>Certified in SAP NetWeaver; managed DB2, MaxDB, Oracle, etc...</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Stellantis (Former Chrysler Mexico) – E-Business & DBA (Sep 2002 – Feb 2007)</summary>
+        <ul>
+          <li>Migrated legacy systems to cloud-based architecture...</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Moredata, Portugal – Developer / DB Specialist (Sep 2001 – Aug 2002)</summary>
+        <ul>
+          <li>Developed internet solutions for Portugal Telecom...</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Intelligas, Mexico – Linux & DB Specialist (Sep 2000 – Aug 2001)</summary>
+        <ul>
+          <li>Developed early transportation systems using Informix...</li>
+        </ul>
+      </details>
+
+    </section>
+
+    <section id="skills">
+      <h2>Key Competencies</h2>
+      <ul>
+        <li>Executive Leadership & Global Strategy</li>
+        <li>AI & Generative AI Innovation</li>
+        <li>Cloud Solutions & SAP BTP</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li>Master’s in Information Systems</li>
+        <li>Bachelor’s in Business Management</li>
+        <li>SAP Enterprise Architecture</li>
+      </ul>
+    </section>
+
+    <section id="languages">
+      <h2>Languages</h2>
+      <ul>
+        <li>English: Fluent</li>
+        <li>Spanish: Native</li>
+        <li>Portuguese (Brazil): Fluent</li>
+      </ul>
+    </section>
+
+    <section id="interests">
+      <h2>Personal Interests</h2>
+      <ul>
+        <li>Artistic Painting – <a href="http://www.estala.com">estalav.com</a></li>
+        <li>Swimming</li>
+        <li>Road Biking</li>
+      </ul>
+    </section>
 
     <footer>
       <p>&copy; 2025 Carlos A. Estala Velasco. All rights reserved.</p>
     </footer>
   </main>
+
+  <script>
+    function toggleTheme() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
+    }
+  </script>
 </body>
 </html>
