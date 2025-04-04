@@ -1,141 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlos A. Estala Velasco – Resume</title>
-  <style>
-    :root {
-      --bg-color: #f9fafb;
-      --text-color: #1f2937;
-      --accent-color: #3b82f6;
-    }
-    [data-theme="dark"] {
-      --bg-color: #0f172a;
-      --text-color: #f1f5f9;
-      --accent-color: #60a5fa;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      display: flex;
-    }
-    aside {
-      width: 250px;
-      background-color: var(--accent-color);
-      color: white;
-      padding: 2rem 1rem;
-      min-height: 100vh;
-      position: sticky;
-      top: 0;
-    }
-    aside img {
-      width: 120px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 1rem;
-    }
-    aside h1 {
-      font-size: 1.5rem;
-      text-align: center;
-      margin-bottom: 0.5rem;
-    }
-    aside p, aside a {
-      text-align: center;
-      display: block;
-      margin: 0.3rem auto;
-      color: white;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-    aside nav {
-      margin-top: 2rem;
-    }
-    aside nav a {
-      display: block;
-      margin: 0.5rem 0;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
-    main {
-      flex-grow: 1;
-      padding: 2rem;
-      max-width: 1000px;
-    }
-    h2 {
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.3rem;
-    }
-    details {
-      margin-bottom: 1rem;
-    }
-    details summary {
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: none;
-      border: 2px solid var(--accent-color);
-      padding: 0.5rem;
-      cursor: pointer;
-      color: var(--accent-color);
-      border-radius: 5px;
-      z-index: 1000;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-    }
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      aside {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        min-height: auto;
-      }
-    }
-  </style>
-</head>
-<body>
-  <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
-  <aside>
-    <img src="https://media.licdn.com/dms/image/v2/D5616AQG7nBqC08aFHg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1685120828953?e=1749081600&v=beta&t=JpbdKpjSUb4OR422oZtycM0hIH9bjUVv1XFJzXRYChE" alt="Carlos A. Estala Velasco" />
-    <h1>Carlos A. Estala Velasco</h1>
-    <p>Global Co-Lead, SAP AppHaus</p>
-    <a href="mailto:estalav@gmail.com">estalav@gmail.com</a>
-    <a href="https://linkedin.com/in/carlos-estala">LinkedIn</a>
-    <a href="Resume - Carlos A. Estala Velasco - March 10 2025.pdf" download>📄 Download PDF</a>
-    <nav>
-      <a href="#summary">Summary</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#languages">Languages</a>
-      <a href="#interests">Interests</a>
-    </nav>
-  </aside>
-  <main>
-    <section id="summary">
-      <h2>Executive Summary</h2>
-      <p>Strategic and results-driven executive... [full summary from resume goes here]</p>
-    </section>
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #058ED9; /* Blue from estala.com */
+    --accent-dark: #004E7C; /* Darker blue for contrast */
+    --highlight: #66CCFF; /* Lighter blue for hover/effects */
+  }
+  [data-theme="dark"] {
+    --bg-color: #111827;
+    --text-color: #E5E7EB;
+    --accent-color: #66CCFF;
+    --accent-dark: #004E7C;
+    --highlight: #058ED9;
+  }
 
-    <section id="experience">
-      <h2>Professional Experience</h2>
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+  }
 
-      <details>
+  aside {
+    background-color: var(--accent-color);
+    color: white;
+    width: 250px;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+
+  aside a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: var(--highlight);
+  }
+
+  .theme-toggle {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    background: transparent;
+    border-radius: 5px;
+    padding: 0.5rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  h2 {
+    border-bottom: 2px solid var(--accent-color);
+  }
+
+  details summary {
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--accent-dark);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+  }
+
+  details[open] summary {
+    background-color: var(--highlight);
+    color: black;
+  }
+</style>
