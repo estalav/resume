@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos A. Estala Velasco – Resume</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --accent-color: #007acc;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --accent-color: #66ccff;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--accent-color);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--accent-color);
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 2px solid var(--accent-color);
+      padding: 0.5rem;
+      cursor: pointer;
+      color: var(--accent-color);
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f0f0f0;
+    }
+    @media (max-width: 600px) {
+      nav {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+
+  <header>
+    <h1>Carlos A. Estala Velasco</h1>
+    <p>Global Co-Lead, SAP AppHaus Network & Enterprise Architect</p>
+    <p>Palo Alto, CA | <a href="mailto:estalav@gmail.com" style="color: white; text-decoration: underline;">estalav@gmail.com</a> | <a href="https://linkedin.com/in/carlos-estala" style="color: white; text-decoration: underline;">LinkedIn</a></p>
+    <a href="Resume - Carlos A. Estala Velasco - March 10 2025.pdf" download style="color: white;">📄 Download PDF</a>
+  </header>
+
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#languages">Languages</a>
+    <a href="#interests">Interests</a>
+  </nav>
+
+  <section id="summary">
+    <h2>Executive Summary</h2>
+    <p>Strategic and results-driven executive... [full summary from resume goes here]</p>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <p><strong>SAP Labs LLC – Global Co-Lead & Enterprise Architect</strong><br>Nov 2024 – Present</p>
+    <ul>
+      <li>Define and drive global SAP AppHaus Network strategy...</li>
+      <li>Architect business AI workshops and LLM-based solutions...</li>
+      <!-- Add more items as needed -->
+    </ul>
+    <!-- Repeat similar structure for past roles -->
+  </section>
+
+  <section id="skills">
+    <h2>Key Competencies</h2>
+    <ul>
+      <li>Executive Leadership & Global Strategy</li>
+      <li>AI & Generative AI Innovation</li>
+      <li>Cloud Solutions & SAP BTP</li>
+      <!-- Add more as needed -->
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <ul>
+      <li>Master’s in Information Systems</li>
+      <li>Bachelor’s in Business Management</li>
+      <li>SAP Enterprise Architecture</li>
+    </ul>
+  </section>
+
+  <section id="languages">
+    <h2>Languages</h2>
+    <ul>
+      <li>English: Fluent</li>
+      <li>Spanish: Native</li>
+      <li>Portuguese (Brazil): Fluent</li>
+    </ul>
+  </section>
+
+  <section id="interests">
+    <h2>Personal Interests</h2>
+    <ul>
+      <li>Artistic Painting – <a href="http://www.estala.com">estalav.com</a></li>
+      <li>Swimming</li>
+      <li>Road Biking</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Carlos A. Estala Velasco. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>
