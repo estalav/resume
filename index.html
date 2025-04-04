@@ -6,46 +6,71 @@
   <title>Carlos A. Estala Velasco – Resume</title>
   <style>
     :root {
-      --bg-color: #ffffff;
-      --text-color: #1a1a1a;
-      --accent-color: #007acc;
+      --bg-color: #f9fafb;
+      --text-color: #1f2937;
+      --accent-color: #3b82f6;
     }
     [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --accent-color: #66ccff;
+      --bg-color: #0f172a;
+      --text-color: #f1f5f9;
+      --accent-color: #60a5fa;
+    }
+    * {
+      box-sizing: border-box;
     }
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      display: flex;
     }
-    header {
-      background: var(--accent-color);
+    aside {
+      width: 250px;
+      background-color: var(--accent-color);
       color: white;
-      padding: 2rem;
-      text-align: center;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      position: sticky;
+      top: 0;
     }
-    nav {
-      text-align: center;
-      padding: 1rem;
+    aside img {
+      width: 120px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem;
     }
-    nav a {
-      margin: 0 1rem;
+    aside h1 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    aside p, aside a {
+      text-align: center;
+      display: block;
+      margin: 0.3rem auto;
+      color: white;
       text-decoration: none;
-      color: var(--accent-color);
-      font-weight: bold;
+      font-size: 0.9rem;
     }
-    section {
+    aside nav {
+      margin-top: 2rem;
+    }
+    aside nav a {
+      display: block;
+      margin: 0.5rem 0;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    main {
+      flex-grow: 1;
       padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+      max-width: 1000px;
     }
     h2 {
-      color: var(--accent-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.3rem;
     }
     .theme-toggle {
       position: fixed;
@@ -57,94 +82,100 @@
       cursor: pointer;
       color: var(--accent-color);
       border-radius: 5px;
+      z-index: 1000;
     }
     footer {
       text-align: center;
       padding: 2rem;
-      background: #f0f0f0;
     }
-    @media (max-width: 600px) {
-      nav {
-        font-size: 0.9rem;
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        min-height: auto;
       }
     }
   </style>
 </head>
 <body>
   <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
-
-  <header>
+  <aside>
+    <img src="https://media.licdn.com/dms/image/v2/D5616AQG7nBqC08aFHg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1685120828953?e=1749081600&v=beta&t=JpbdKpjSUb4OR422oZtycM0hIH9bjUVv1XFJzXRYChE" alt="Carlos A. Estala Velasco" />
     <h1>Carlos A. Estala Velasco</h1>
-    <p>Global Co-Lead, SAP AppHaus Network & Enterprise Architect</p>
-    <p>Palo Alto, CA | <a href="mailto:estalav@gmail.com" style="color: white; text-decoration: underline;">estalav@gmail.com</a> | <a href="https://linkedin.com/in/carlos-estala" style="color: white; text-decoration: underline;">LinkedIn</a></p>
-    <a href="Resume - Carlos A. Estala Velasco - March 10 2025.pdf" download style="color: white;">📄 Download PDF</a>
-  </header>
+    <p>Global Co-Lead, SAP AppHaus</p>
+    <a href="mailto:estalav@gmail.com">estalav@gmail.com</a>
+    <a href="https://linkedin.com/in/carlos-estala">LinkedIn</a>
+    <a href="Resume - Carlos A. Estala Velasco - March 10 2025.pdf" download>📄 Download PDF</a>
+    <nav>
+      <a href="#summary">Summary</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#languages">Languages</a>
+      <a href="#interests">Interests</a>
+    </nav>
+  </aside>
+  <main>
+    <section id="summary">
+      <h2>Executive Summary</h2>
+      <p>Strategic and results-driven executive... [full summary from resume goes here]</p>
+    </section>
 
-  <nav>
-    <a href="#summary">Summary</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#languages">Languages</a>
-    <a href="#interests">Interests</a>
-  </nav>
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <p><strong>SAP Labs LLC – Global Co-Lead & Enterprise Architect</strong><br>Nov 2024 – Present</p>
+      <ul>
+        <li>Define and drive global SAP AppHaus Network strategy...</li>
+        <li>Architect business AI workshops and LLM-based solutions...</li>
+      </ul>
+    </section>
 
-  <section id="summary">
-    <h2>Executive Summary</h2>
-    <p>Strategic and results-driven executive... [full summary from resume goes here]</p>
-  </section>
+    <section id="skills">
+      <h2>Key Competencies</h2>
+      <ul>
+        <li>Executive Leadership & Global Strategy</li>
+        <li>AI & Generative AI Innovation</li>
+        <li>Cloud Solutions & SAP BTP</li>
+      </ul>
+    </section>
 
-  <section id="experience">
-    <h2>Professional Experience</h2>
-    <p><strong>SAP Labs LLC – Global Co-Lead & Enterprise Architect</strong><br>Nov 2024 – Present</p>
-    <ul>
-      <li>Define and drive global SAP AppHaus Network strategy...</li>
-      <li>Architect business AI workshops and LLM-based solutions...</li>
-      <!-- Add more items as needed -->
-    </ul>
-    <!-- Repeat similar structure for past roles -->
-  </section>
+    <section id="education">
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li>Master’s in Information Systems</li>
+        <li>Bachelor’s in Business Management</li>
+        <li>SAP Enterprise Architecture</li>
+      </ul>
+    </section>
 
-  <section id="skills">
-    <h2>Key Competencies</h2>
-    <ul>
-      <li>Executive Leadership & Global Strategy</li>
-      <li>AI & Generative AI Innovation</li>
-      <li>Cloud Solutions & SAP BTP</li>
-      <!-- Add more as needed -->
-    </ul>
-  </section>
+    <section id="languages">
+      <h2>Languages</h2>
+      <ul>
+        <li>English: Fluent</li>
+        <li>Spanish: Native</li>
+        <li>Portuguese (Brazil): Fluent</li>
+      </ul>
+    </section>
 
-  <section id="education">
-    <h2>Education & Certifications</h2>
-    <ul>
-      <li>Master’s in Information Systems</li>
-      <li>Bachelor’s in Business Management</li>
-      <li>SAP Enterprise Architecture</li>
-    </ul>
-  </section>
+    <section id="interests">
+      <h2>Personal Interests</h2>
+      <ul>
+        <li>Artistic Painting – <a href="http://www.estala.com">estalav.com</a></li>
+        <li>Swimming</li>
+        <li>Road Biking</li>
+      </ul>
+    </section>
 
-  <section id="languages">
-    <h2>Languages</h2>
-    <ul>
-      <li>English: Fluent</li>
-      <li>Spanish: Native</li>
-      <li>Portuguese (Brazil): Fluent</li>
-    </ul>
-  </section>
-
-  <section id="interests">
-    <h2>Personal Interests</h2>
-    <ul>
-      <li>Artistic Painting – <a href="http://www.estala.com">estalav.com</a></li>
-      <li>Swimming</li>
-      <li>Road Biking</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Carlos A. Estala Velasco. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Carlos A. Estala Velasco. All rights reserved.</p>
+    </footer>
+  </main>
 
   <script>
     function toggleTheme() {
