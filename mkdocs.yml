@@ -2,8 +2,13 @@ site_name: Carlos A. Estala Velasco
 theme:
   name: material
   palette:
-    primary: blue
+    primary: custom
     accent: cyan
+  font:
+    text: Montserrat
+  favicon: images/favicon.ico
+extra_css:
+  - styles/custom.css
 nav:
   - Home: index.md
   - Experience: experience.md
