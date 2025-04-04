@@ -72,6 +72,14 @@
       border-bottom: 2px solid var(--accent-color);
       padding-bottom: 0.3rem;
     }
+    details {
+      margin-bottom: 1rem;
+    }
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
     .theme-toggle {
       position: fixed;
       top: 1rem;
@@ -106,7 +114,7 @@
 <body>
   <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
   <aside>
-    <img src="https://estalav.github.io/resume-2023/ce.png" alt="Carlos A. Estala Velasco" />
+    <img src="https://media.licdn.com/dms/image/v2/D5616AQG7nBqC08aFHg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1685120828953?e=1749081600&v=beta&t=JpbdKpjSUb4OR422oZtycM0hIH9bjUVv1XFJzXRYChE" alt="Carlos A. Estala Velasco" />
     <h1>Carlos A. Estala Velasco</h1>
     <p>Global Co-Lead, SAP AppHaus</p>
     <a href="mailto:estalav@gmail.com">estalav@gmail.com</a>
@@ -129,59 +137,5 @@
 
     <section id="experience">
       <h2>Professional Experience</h2>
-      <p><strong>SAP Labs LLC – Global Co-Lead & Enterprise Architect</strong><br>Nov 2024 – Present</p>
-      <ul>
-        <li>Define and drive global SAP AppHaus Network strategy...</li>
-        <li>Architect business AI workshops and LLM-based solutions...</li>
-      </ul>
-    </section>
 
-    <section id="skills">
-      <h2>Key Competencies</h2>
-      <ul>
-        <li>Executive Leadership & Global Strategy</li>
-        <li>AI & Generative AI Innovation</li>
-        <li>Cloud Solutions & SAP BTP</li>
-      </ul>
-    </section>
-
-    <section id="education">
-      <h2>Education & Certifications</h2>
-      <ul>
-        <li>Master’s in Information Systems</li>
-        <li>Bachelor’s in Business Management</li>
-        <li>SAP Enterprise Architecture</li>
-      </ul>
-    </section>
-
-    <section id="languages">
-      <h2>Languages</h2>
-      <ul>
-        <li>English: Fluent</li>
-        <li>Spanish: Native</li>
-        <li>Portuguese (Brazil): Fluent</li>
-      </ul>
-    </section>
-
-    <section id="interests">
-      <h2>Personal Interests</h2>
-      <ul>
-        <li>Artistic Painting – <a href="http://www.estala.com">estalav.com</a></li>
-        <li>Swimming</li>
-        <li>Road Biking</li>
-      </ul>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Carlos A. Estala Velasco. All rights reserved.</p>
-    </footer>
-  </main>
-
-  <script>
-    function toggleTheme() {
-      const theme = document.documentElement.getAttribute('data-theme');
-      document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
-    }
-  </script>
-</body>
-</html>
+      <details>
