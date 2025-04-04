@@ -1,0 +1,13 @@
+site_name: Carlos A. Estala Velasco
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: cyan
+nav:
+  - Home: index.md
+  - Experience: experience.md
+  - Skills: skills.md
+  - Education: education.md
+  - Languages: languages.md
+  - Interests: interests.md
