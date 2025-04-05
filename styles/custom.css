@@ -2,7 +2,7 @@
 /* Color palette from estala.com */
 :root {
   --primary-color: #111F35;
-  --background-color: #BFBDAB;
+  --background-color: #0075B0;
   --accent-color: #00B8D4;
   --link-color: #0075B0;
 }
@@ -14,9 +14,9 @@ body {
 
 /* Hero section with dark top header style */
 .hero-section {
-  background-color: var(--primary-color);
-  padding: 4rem 2rem;
+  background: url('images/sections/hero.jpg') center/cover no-repeat;
   color: white;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
