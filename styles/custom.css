@@ -1,14 +1,40 @@
 
-/* Basic layout cleanup and spacing */
-.md-typeset h1, .md-typeset h2 {
-  font-weight: 600;
-}
-.md-typeset p {
-  line-height: 1.6;
+/* Color palette from estala.com */
+:root {
+  --primary-color: #111F35;
+  --background-color: #BFBDAB;
+  --accent-color: #00B8D4;
+  --link-color: #0075B0;
 }
 
-:root {
-  --md-primary-fg-color: #111F36;
-  --md-accent-fg-color: #00B8D4;
-  --md-default-bg-color: #BFBDAB;
+/* General background */
+body {
+  background-color: var(--background-color);
+}
+
+/* Hero section with dark top header style */
+.hero-section {
+  background-color: var(--primary-color);
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+/* Section backgrounds now blend with primary site palette */
+.bg-summary,
+.bg-experience,
+.bg-skills,
+.bg-education,
+.bg-contact {
+  background-color: var(--background-color);
+  padding: 3rem 2rem;
+  color: #111F35;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--accent-color);
 }
