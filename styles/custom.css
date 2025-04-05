@@ -1,38 +1,8 @@
 
-/* Section backgrounds for Squarespace-style layout */
-.hero-section {
-  background: url('images/sections/hero.jpg') center/cover no-repeat;
-  padding: 4rem 2rem;
-  color: white;
-  text-align: center;
+/* Basic layout cleanup and spacing */
+.md-typeset h1, .md-typeset h2 {
+  font-weight: 600;
 }
-
-.bg-summary {
-  background: url('images/sections/summary.jpg') center/cover no-repeat;
-  padding: 3rem 2rem;
-  color: white;
-}
-
-.bg-experience {
-  background: url('images/sections/experience.jpg') center/cover no-repeat;
-  padding: 3rem 2rem;
-  color: white;
-}
-
-.bg-skills {
-  background: url('images/sections/skills.jpg') center/cover no-repeat;
-  padding: 3rem 2rem;
-  color: white;
-}
-
-.bg-education {
-  background: url('images/sections/education.jpg') center/cover no-repeat;
-  padding: 3rem 2rem;
-  color: white;
-}
-
-.bg-contact {
-  background: url('images/sections/contact.jpg') center/cover no-repeat;
-  padding: 3rem 2rem;
-  color: white;
+.md-typeset p {
+  line-height: 1.6;
 }
